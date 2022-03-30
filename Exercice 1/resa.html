@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <title>Restaurant</title>
+  </head>
+
+  <body>
+    <form id="form" method="POST" action="recap.php">
+      <label for="nom">Votre nom: </label>
+      <input type="text" name="nom" /><br /><br />
+      <label for="prenom">Votre prénom: </label>
+      <input type="text" name="prenom" /><br /><br />
+      <label for="nombre">No. de sandwichs:</label>
+      <input type="number" name="nombre" />
+      <br /><br />
+      <label for="adresse">Votre adresse: </label>
+      <textarea id="adresse" name="adresse" rows="6" cols="60"></textarea>
+      <br /><br />
+      <label for="type">Type du sandwich: </label>
+      <br />
+      <br />
+      <select name="type" size="3" required>
+        <option value="viande">Viande</option>
+        <option value="poulet">Poulet</option>
+        <option value="Escalope">Escalope</option>
+      </select>
+
+      <p>Ingrédients à ajouter:</p>
+
+      <div>
+        <input type="checkbox" id="harissa" name="harissa" />
+        <label for="harissa">Harissa</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="salade" name="salade" />
+        <label for="salade">Salade</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="mayonnaise" name="mayonnaise" />
+        <label for="mayonnaise">Mayonnaise</label>
+      </div>
+      <br /><br />
+
+      <br />
+
+      <input
+        name="submit"
+        value="Submit"
+        type="submit"
+        onclick="outofstock()"
+      />
+    </form>
+  </body>
+</html>
